@@ -19,6 +19,10 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    document.body.classList.add("theme-transition");
+  }, []);
+
+  useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
     if (darkMode) {
       document.body.classList.remove("light-mode");
@@ -28,8 +32,6 @@ export default function App() {
       document.body.classList.add("light-mode");
     }
   }, [darkMode]);
-
-
 
   return (
     <>
