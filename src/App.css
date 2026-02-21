@@ -9,19 +9,25 @@
 }
 
 body {
-  background-color: hsl(230, 17%, 14%);
   transition: background-color 0.3s ease;
 }
 
-body.light-mode {
+.dark-mode body {
+  background-color: hsl(230, 17%, 14%);
+}
+
+.light-mode body {
   background-color: hsl(0, 100%, 100%);
 }
 
 .container.light-mode {
   background-color: hsl(0, 100%, 100%);
 }
+.dark-mode .header {
+  background-color: hsl(232, 19%, 15%);
+}
 
-.container.light-mode .header {
+.light-mode .header {
   background-color: hsl(220, 82%, 98%);
 }
 
@@ -93,7 +99,6 @@ body.light-mode {
 
 .header {
   width: 100%;
-  background-color: hsl(232, 19%, 15%);
   height: 350px;
   display: flex;
   justify-content: center;
