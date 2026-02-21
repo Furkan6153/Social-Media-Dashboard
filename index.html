@@ -5,8 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>social</title>
+    <style>
+      body { background-color: hsl(230, 17%, 14%); }
+      body.light-mode { background-color: hsl(0, 100%, 100%); }
+    </style>
   </head>
   <body>
+    <script>
+      (function() {
+        const savedMode = localStorage.getItem("darkMode");
+        const darkMode = savedMode !== null ? JSON.parse(savedMode) : true;
+        if (darkMode) {
+          document.body.classList.add("dark-mode");
+        } else {
+          document.body.classList.add("light-mode");
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
