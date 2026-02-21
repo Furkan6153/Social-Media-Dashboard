@@ -12,7 +12,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    fetch("/social-media-dashboard/data/data.json")
+    fetch(import.meta.env.BASE_URL + "data/data.json")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch(console.error);
